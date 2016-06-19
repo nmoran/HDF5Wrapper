@@ -1,0 +1,2 @@
+ADD_EXECUTABLE (HDF5Wrapper_Real HDF5WrapperReal_test.cpp)
+TARGET_LINK_LIBRARIES(HDF5Wrapper_Real ${HDF5_CXX_LIBRARIES} HDF5Wrapper)
