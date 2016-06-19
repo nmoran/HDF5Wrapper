@@ -1,2 +1,6 @@
-ADD_EXECUTABLE (HDF5Wrapper_Real HDF5WrapperReal_test.cpp)
-TARGET_LINK_LIBRARIES(HDF5Wrapper_Real ${HDF5_CXX_LIBRARIES} HDF5Wrapper)
+ADD_EXECUTABLE (HDF5WrapperReal_test HDF5WrapperReal_test.cpp)
+TARGET_LINK_LIBRARIES(HDF5WrapperReal_test ${HDF5_CXX_LIBRARIES} HDF5Wrapper)
+ADD_EXECUTABLE (HDF5Wrapper_test HDF5Wrapper_test.cpp)
+TARGET_LINK_LIBRARIES(HDF5Wrapper_test ${HDF5_CXX_LIBRARIES} HDF5Wrapper)
+ADD_EXECUTABLE (HDF5WrapperRealBuf_test HDF5WrapperRealBuf_test.cpp)
+TARGET_LINK_LIBRARIES(HDF5WrapperRealBuf_test ${HDF5_CXX_LIBRARIES} HDF5Wrapper)

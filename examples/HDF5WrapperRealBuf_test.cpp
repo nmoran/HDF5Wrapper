@@ -1,4 +1,4 @@
-#include "HDF5Wrapper.h"
+#include "../src/HDF5Wrapper.h"
 #include <complex>
 
 int main(){

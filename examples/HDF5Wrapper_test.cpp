@@ -1,4 +1,4 @@
-#include "HDF5Wrapper.h"
+#include "../src/HDF5Wrapper.h"
 #include <complex>
 
 int main(){
@@ -10,7 +10,6 @@ int main(){
     HDF5Wrapper* wrapper;
     wrapper = new HDF5Wrapper;
 
-    //cout << "Opening file: " << wrapper->openFileToRead("hammer.hdf5") << endl;
     cout << "Opening file: " << wrapper->openFileToWrite("hammertest.hdf5") << endl;
 
     complex<double> *write_samples;
@@ -27,6 +26,8 @@ int main(){
 
     cout << "Create dataset: " << wrapper->createComplexDataset("samples", rows, cols) << endl;
     cout << "Write samples: " << wrapper->writeComplexSamples("samples", rows, cols, start, write_samples) << endl;
+
+    wrapper->close();
 
     cout << "Opening file: " << wrapper->openFileToRead("hammertest.hdf5") << endl;
 

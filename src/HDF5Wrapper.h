@@ -68,8 +68,8 @@ class HDF5Wrapper{
         const H5std_string STR_IMAG("i");
         //this->complexType_ptr = new CompType(sizeof(complex<double>));
         this->complexType_ptr = new CompType(2*sizeof(double));
-        //this->complexType_ptr->insertMember(STR_REAL, 0, PredType::NATIVE_DOUBLE);
-        //this->complexType_ptr->insertMember(STR_IMAG, sizeof(double), PredType::NATIVE_DOUBLE);
+        this->complexType_ptr->insertMember(STR_REAL, 0, PredType::NATIVE_DOUBLE);
+        this->complexType_ptr->insertMember(STR_IMAG, sizeof(double), PredType::NATIVE_DOUBLE);
     }
 
     ~HDF5Wrapper(){
